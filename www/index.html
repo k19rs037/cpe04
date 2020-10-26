@@ -184,7 +184,7 @@
     function btnAClick(e){
       active = true;
       startTime = new Date();
-      
+      $("#count").html("カウントダウン開始");
         
     }
 
@@ -211,6 +211,8 @@
         var rest = period - time;
         $("#time").html("経過時間：" + time);
         $("#remain").html("残り時間：" + rest);
+        $("#count").html("カウントダウン開始");
+
         analog(rest);
       }
       if(rest <= 0) {
@@ -238,6 +240,7 @@
     <input type="number" id="second" value=0 >
     <div id="setm">分</div>
     <div id="sets">秒</div>
+    <div id="count"></div>
 
 </body>
 </html>
