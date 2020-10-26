@@ -154,7 +154,6 @@
     var startTime = 0;
     var period = 0;
 
-
     
     // ボタンの初期設定
     function init(){
@@ -185,13 +184,15 @@
       active = true;
       startTime = new Date();
       $("#count").html("カウントダウン開始");
+      $("#btnA").css("backgroundColor","white");
     }
 
     // ButtonBがクリックされた時の処理
     function btnBClick(e){
       active = false;
       $("#count").html("カウントダウン停止中");
-        
+      $("#btnB").css("backgroundColor","white");
+      $("#btnA").css("backgroundColor","yellow");
         
     }
 
@@ -201,7 +202,8 @@
         period = 60* parseInt($("#minute").val()) + parseInt($("#second").val());
         $("#time").html("経過時間： 0");
         $("#remain").html("残り時間：" + period);
-        
+        $("#btnC").css("backgroundColor","white");
+        $("#btnA").css("backgroundColor","yellow");
     }
     
  
